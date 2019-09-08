@@ -10,14 +10,12 @@ import com.example.atry.zhbj.MainActivity;
 import com.example.atry.zhbj.R;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
-import org.w3c.dom.Text;
-
 // 用作主页各个页面的基类
 public class BasePager {
     public Activity mactivity;
     public TextView tvTitle;
     public FrameLayout fl_content;
-    public ImageButton btnMenu;
+    public ImageButton btnMenu,ib_photoshown;
 
     public View mRootView;
 
@@ -29,6 +27,7 @@ public class BasePager {
         View view = View.inflate(mactivity, R.layout.base_pager,null);
         tvTitle = view.findViewById(R.id.tv_title);
         btnMenu = view.findViewById(R.id.ib_title);
+        ib_photoshown = view.findViewById(R.id.ib_photoshown);
         fl_content = view.findViewById(R.id.fl_content);
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override

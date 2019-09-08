@@ -2,6 +2,8 @@ package com.example.atry.zhbj.base;
 
 import android.app.Application;
 
+import com.mob.MobSDK;
+
 import org.xutils.x;
 
 public class ZhbjApplication extends Application {
@@ -9,6 +11,6 @@ public class ZhbjApplication extends Application {
     public void onCreate() {
         super.onCreate();
         x.Ext.init(this);
-        
+        MobSDK.init(this);
     }
 }

@@ -52,6 +52,9 @@ public class GuideActivity extends AppCompatActivity {
         vp_guide.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                //mPointDis为一个成员变量，他的值为viewpager的宽度，设置视图树的观察者，当生成这个视图时，即可
+                //得到几个小圆点的宽度，positionOffset在viewpager上滑动的百分比,leftmargin等于百分比乘以他们之间
+                // 的间距，即可使小红点跟随滑动
                 int leftmargin = (int) (mPointDis * positionOffset) + position * mPointDis;
                 RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) iv_dot_red.getLayoutParams();
                 params.leftMargin = leftmargin;

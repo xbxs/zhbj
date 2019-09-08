@@ -7,6 +7,9 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
+/**
+ *  创建这个类继承ViewPager不让ViewPager滑动
+ */
 public class NoScrollViewPager extends ViewPager {
 
 

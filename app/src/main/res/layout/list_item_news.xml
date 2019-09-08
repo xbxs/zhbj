@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+    <ImageView
+        android:id="@+id/iv_item_picture"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:background="#000"
+        android:padding="1dp"
+        android:src="@drawable/list_news_item"
+        />
+
+    <TextView
+        android:id="@+id/tv_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="你水电费垃圾堆拉发动机拉斯副经理算法简单"
+        android:layout_toRightOf="@id/iv_item_picture"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:maxLines="2"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/tv_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2019-09-03 11：30"
+        android:layout_below="@id/tv_item_title"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"
+        android:layout_toRightOf="@id/iv_item_picture"
+        />
+
+</RelativeLayout>

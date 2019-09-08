@@ -11,5 +11,8 @@ public class ConstantValues {
     public static final String SERVER_URL = "http://10.0.2.2:8080/zhbj";
     // 2. 分类信息
     public static final String CATEGORY_URL = SERVER_URL+"/categories.json";
-
+    //3.组图的URI
+    public static final String PHOTOS_URL = SERVER_URL+"/photos/photos_1.json";
+    //存储用户已读和未读的id
+    public static String READ_IDS;
 }

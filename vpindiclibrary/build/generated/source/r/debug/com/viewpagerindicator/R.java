@@ -130,25 +130,26 @@ public final class R {
         public static int notification_top_pad_large_text = 0x7f080021;
     }
     public static final class drawable {
-        public static int notification_action_background = 0x7f090001;
-        public static int notification_bg = 0x7f090002;
-        public static int notification_bg_low = 0x7f090003;
-        public static int notification_bg_low_normal = 0x7f090004;
-        public static int notification_bg_low_pressed = 0x7f090005;
-        public static int notification_bg_normal = 0x7f090006;
-        public static int notification_bg_normal_pressed = 0x7f090007;
-        public static int notification_icon_background = 0x7f090008;
-        public static int notification_template_icon_bg = 0x7f090009;
-        public static int notification_template_icon_low_bg = 0x7f09000a;
-        public static int notification_tile_bg = 0x7f09000b;
-        public static int notify_panel_notification_icon_bg = 0x7f09000c;
-        public static int vpi__tab_indicator = 0x7f09000d;
-        public static int vpi__tab_selected_focused_holo = 0x7f09000e;
-        public static int vpi__tab_selected_holo = 0x7f09000f;
-        public static int vpi__tab_selected_pressed_holo = 0x7f090010;
-        public static int vpi__tab_unselected_focused_holo = 0x7f090011;
-        public static int vpi__tab_unselected_holo = 0x7f090012;
-        public static int vpi__tab_unselected_pressed_holo = 0x7f090013;
+        public static int news_tab_item_bg_select = 0x7f090001;
+        public static int notification_action_background = 0x7f090002;
+        public static int notification_bg = 0x7f090003;
+        public static int notification_bg_low = 0x7f090004;
+        public static int notification_bg_low_normal = 0x7f090005;
+        public static int notification_bg_low_pressed = 0x7f090006;
+        public static int notification_bg_normal = 0x7f090007;
+        public static int notification_bg_normal_pressed = 0x7f090008;
+        public static int notification_icon_background = 0x7f090009;
+        public static int notification_template_icon_bg = 0x7f09000a;
+        public static int notification_template_icon_low_bg = 0x7f09000b;
+        public static int notification_tile_bg = 0x7f09000c;
+        public static int notify_panel_notification_icon_bg = 0x7f09000d;
+        public static int vpi__tab_indicator = 0x7f09000e;
+        public static int vpi__tab_selected_focused_holo = 0x7f09000f;
+        public static int vpi__tab_selected_holo = 0x7f090010;
+        public static int vpi__tab_selected_pressed_holo = 0x7f090011;
+        public static int vpi__tab_unselected_focused_holo = 0x7f090012;
+        public static int vpi__tab_unselected_holo = 0x7f090013;
+        public static int vpi__tab_unselected_pressed_holo = 0x7f090014;
     }
     public static final class id {
         public static int action0 = 0x7f0c0001;

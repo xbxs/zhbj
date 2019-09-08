@@ -1,8 +1,8 @@
 package com.example.atry.zhbj;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -12,8 +12,6 @@ import android.widget.ImageView;
 
 import com.example.atry.zhbj.utils.ConstantValues;
 import com.example.atry.zhbj.utils.PrefUtils;
-
-import org.xutils.x;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -25,7 +23,6 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         splash_bg = findViewById(R.id.splash_bg);
         initAnimation();
-
 
     }
 
