@@ -16,6 +16,7 @@ import com.example.atry.zhbj.R;
 import com.example.atry.zhbj.base.BaseMenuDetailPager;
 import com.example.atry.zhbj.domain.PhotoBean;
 import com.example.atry.zhbj.utils.ConstantValues;
+import com.example.atry.zhbj.utils.MyBitmapUtils;
 import com.example.atry.zhbj.utils.PrefUtils;
 import com.google.gson.Gson;
 
@@ -35,6 +36,7 @@ public class PhotosMenuDetailPager extends BaseMenuDetailPager {
     private String mUri;
     private ImageButton ib_photoshown;
     private boolean isListview = true;
+    private MyBitmapUtils mMyBitmapUtils;
 
     public PhotosMenuDetailPager(Activity activity,ImageButton ib_photoshown) {
         super(activity);
@@ -114,9 +116,9 @@ public class PhotosMenuDetailPager extends BaseMenuDetailPager {
         mPhotos = photoBean.data.news;
         //做缓存
         PrefUtils.setString(mactivity,ConstantValues.PHOTOS_URL,result);
-
+        //生成bitmap图片的缓存
+        mMyBitmapUtils = new MyBitmapUtils();
         mLv_photos.setAdapter(new PhotosAdapter());
-
         mGv_photos.setAdapter(new PhotosAdapter());
     }
 
@@ -151,14 +153,23 @@ public class PhotosMenuDetailPager extends BaseMenuDetailPager {
             }
 
             PhotoBean.PhotoInfo info = mPhotos.get(position);
-            displayUriPicture(holder.iv_photo,info.listimage);
+//            displayUriPicture(holder.iv_photo,info.listimage);
+
+            //为布局item 赋值
             holder.tv_photo.setText(info.title);
+            //自己创建Bitmap的缓存器
+            mMyBitmapUtils.display(holder.iv_photo,info.listimage);
 
             return convertView;
         }
 
     }
 
+    /**
+     * 使用xUtils对ImageView请求数据并绑定
+     * @param imageView
+     * @param iconUri
+     */
     private void displayUriPicture(ImageView imageView,String iconUri){
         mImageView = imageView;
         mUri = iconUri;

@@ -9,6 +9,7 @@ import com.example.atry.zhbj.fragment.ContentMenuFragment;
 import com.example.atry.zhbj.fragment.LeftMenuFragment;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
+import com.umeng.analytics.MobclickAgent;
 
 public class MainActivity extends SlidingFragmentActivity {
 
@@ -47,5 +48,17 @@ public class MainActivity extends SlidingFragmentActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         ContentMenuFragment contentMenuFragment = (ContentMenuFragment) fragmentManager.findFragmentByTag(FRAGMENT_COTENT_TAG);
         return  contentMenuFragment;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

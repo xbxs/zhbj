@@ -12,6 +12,7 @@ import android.widget.ImageView;
 
 import com.example.atry.zhbj.utils.ConstantValues;
 import com.example.atry.zhbj.utils.PrefUtils;
+import com.umeng.analytics.MobclickAgent;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -72,5 +73,17 @@ public class SplashActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

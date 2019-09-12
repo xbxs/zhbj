@@ -1,11 +1,11 @@
 package com.example.atry.zhbj;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -16,7 +16,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.example.atry.zhbj.utils.ConstantValues;
+import com.example.atry.zhbj.utils.DensityUtils;
 import com.example.atry.zhbj.utils.PrefUtils;
+import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -102,7 +104,7 @@ public class GuideActivity extends AppCompatActivity {
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             // 初始化小圆点
             if(i > 0){
-                params.leftMargin = 15;
+                params.leftMargin = DensityUtils.dip3px(15,this);
             }
             ImageView dotview = new ImageView(this);
             dotview.setImageResource(R.drawable.shape_point_gray);
@@ -133,5 +135,17 @@ public class GuideActivity extends AppCompatActivity {
         public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
             container.removeView((View)object);
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }
